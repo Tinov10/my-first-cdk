@@ -27,7 +27,7 @@ jobs:
       - name: Run Unit Tests
         run: npm run test
 
-      - name: 'Deploy to Azure WebApp'
+      - name: 'Diff AWS CDK Stack'
         run: 'npx cdk diff MyFirstCdkStack --ci --require-approval never --no-asset-metadata'
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
