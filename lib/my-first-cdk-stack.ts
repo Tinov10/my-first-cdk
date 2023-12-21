@@ -29,7 +29,7 @@ export class MyFirstCdkStack extends cdk.Stack {
     new lambda.Function(this, 'lambdaFunction', {
       functionName: 'first-cdk-lambda',
       // code: new lambda.AssetCode('src'),
-      code: lambda.Code.fromBucket(bucket, bucketKey.valueAsString)
+      code: lambda.Code.fromBucket(bucket, bucketKey.valueAsString),
       handler: 'index.handler',
       runtime: lambda.Runtime.NODEJS_16_X,
       memorySize: 128,
